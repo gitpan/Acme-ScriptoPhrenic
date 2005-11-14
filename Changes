@@ -4,3 +4,5 @@ Revision history for Perl extension Acme::ScriptoPhrenic.
 	- original version; created by h2xs 1.22 with options
 		-AXc -n Acme::ScriptoPhrenic
 
+0.0.2  Sun Nov 13 19:55:18 2005
+	- changed POD a bit

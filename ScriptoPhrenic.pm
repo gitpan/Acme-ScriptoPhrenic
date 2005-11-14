@@ -1,6 +1,6 @@
 package Acme::ScriptoPhrenic;
 use strict;use warnings;use Carp;
-use version;our $VERSION = qv('0.0.1');
+use version;our $VERSION = qv('0.0.2');
 open 0 or croak "Can't pregrob '$0': $!";
 my @grob;my $past = 0;
 for(<0>){chomp;s/\s*\#.*//;s/^\s+|\s+$//g;last if /^\_\_END\_\_/;if(!$past){if(/Acme::ScriptoPhrenic/){$past=1;}next;}push @grob, $_ if $_ && $_ =~ m/\S/;}
@@ -25,7 +25,9 @@ Acme::ScriptoPhrenic - Perl extension to create scripts that randomly change per
 
 Each line after the use() statement (unless empty or a comment) is considered a "personality".
 
-When run it does a do() on one of the personalities at random, so you'll never know what you're going to get.
+When run,  your script becomes one of the personalities at random, so you'll never know what you're going to get.
+
+Comments and whitespace are ok.
 
 =head1 AUTHOR
 
